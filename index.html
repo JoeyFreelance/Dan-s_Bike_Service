@@ -150,9 +150,26 @@ nav {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 40px;
+}
+
+.repairs-wide {
+  grid-column: 1 / 4;
+  text-align: center;
+}
+
+.repairs-wide ul {
+  columns: 3;
+  column-gap: 60px;
+  text-align: left;
+  margin-top: 25px;
+}
+
+.repairs-wide li {
+  margin-bottom: 18px;
+  break-inside: avoid;
 }
 
 .service-card {
@@ -310,6 +327,18 @@ footer {
 /* RESPONSIVE */
 
 @media(max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repairs-wide {
+    grid-column: auto;
+  }
+
+  .repairs-wide ul {
+    columns: 1;
+  }
+
   .gallery-grid,
   .reviews-grid {
     grid-template-columns: 1fr 1fr;
@@ -388,7 +417,7 @@ footer {
 
     <div class="about-image">
       <!-- REPLACE THIS IMAGE WITH A PHOTO OF DAN -->
-      <img src="dan.png" alt="Dan from Dan's Bike Service">
+      <img src="dan.jpg" alt="Dan from Dan's Bike Service">
     </div>
 
     <div class="about-text">
@@ -443,15 +472,16 @@ footer {
       </ul>
     </div>
 
-    <div class="service-card">
+    <div class="service-card repairs-wide">
       <h3>Repairs & Extras</h3>
       <ul>
-        <li>Puncture repairs from £16</li>
-        <li>Tubeless setup from £15 per wheel</li>
-        <li>Brake bleeds from £15</li>
-        <li>Headset replacement from £30</li>
-        <li>Bottom bracket replacement from £30</li>
-        <li>Gear cable replacement from £15</li>
+        <li>Puncture repairs from £16 with full tyre inspection included</li>
+        <li>Tubeless setup from £15 per wheel plus sealant and fitting</li>
+        <li>Brake bleeds from £15 to keep braking sharp and responsive</li>
+        <li>Headset replacement from £30 with correct adjustment included</li>
+        <li>Bottom bracket replacement from £30 for smoother riding</li>
+        <li>General adjustments and safety checks available on request</li>
+        <li>Friendly advice always available for any bike related issues</li>
       </ul>
     </div>
 
