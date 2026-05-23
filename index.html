@@ -54,7 +54,7 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.95);
+  background: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +98,7 @@ nav {
 }
 
 .hero-content {
-  background: rgba(255,255,255,0.88);
+  background: #ffffff;
   padding: 50px;
   border-radius: 30px;
   max-width: 850px;
@@ -123,10 +123,27 @@ nav {
 }
 
 .about-content {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
   font-size: 1.05rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* SERVICES */
@@ -299,6 +316,13 @@ footer {
   }
 }
 
+@media(max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 @media(max-width: 768px) {
   nav {
     flex-direction: column;
@@ -361,7 +385,14 @@ footer {
   <h2>About</h2>
 
   <div class="about-content">
-    <p>
+
+    <div class="about-image">
+      <!-- REPLACE THIS IMAGE WITH A PHOTO OF DAN -->
+      <img src="dan.jpg" alt="Dan from Dan's Bike Service">
+    </div>
+
+    <div class="about-text">
+      <p>
       Dan’s Bike Service was started in 2019 and built from a genuine passion for cycling.
       Whether it’s a commuter bike, a family bike or a race machine, every bike gets the same care and attention.
       <br><br>
@@ -369,7 +400,8 @@ footer {
       Every job starts with an assessment and if anything else is discovered during the repair, it’s always discussed first.
       <br><br>
       From puncture repairs to full rebuilds, Dan’s Bike Service is here to help keep you safely on the road and enjoying your ride.
-    </p>
+      </p>
+    </div>
   </div>
 </section>
 
